@@ -1,0 +1,41 @@
+pr:
+  - master
+trigger:
+  - master
+pool:
+  name: 'ERP_STAGING'
+jobs:
+  - job: BuildIMSv2NestJs
+    steps:
+      - task: DownloadSecureFile@1
+        name: env
+        displayName: 'Download staging env'
+        inputs:
+          secureFile: 'fe.env.stg'
+      
+      - script: |
+          echo Coping $(env.secureFilePath) to the build directory $(Build.SourcesDirectory)
+          cp -R $(env.secureFilePath) $(Build.SourcesDirectory)
+          rm .env.stg
+          mv fe.env.stg .env.stg
+
+      - script: |
+          cp ./devops/frontend/Dockerfile ./
+        displayName: 'Get necessary files'
+
+      - script: 
+          docker build -t imsv2-fe-stg:latest --build-arg='STAGE=stg' .
+        displayName: 'Build FE staging image'
+
+      - task: ArchiveFiles@2
+        inputs:
+          rootFolderOrFile: '$(Build.SourcesDirectory)'
+          includeRootFolder: false
+          archiveType: 'zip'
+          archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+
+      - task: PublishBuildArtifacts@1
+        inputs:
+          PathtoPublish: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+          ArtifactName: 'staging-fe-imsv2'
+          publishLocation: 'Container'

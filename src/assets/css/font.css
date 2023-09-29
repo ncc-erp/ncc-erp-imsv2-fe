@@ -1,0 +1,121 @@
+/* Proxima Nova */
+@font-face {
+  font-weight: 300;
+  font-style: normal;
+  font-family: "Proxima Nova";
+  src: url(../fonts/proximaNova/proximanova-light-webfont.woff2) format("woff2"),
+    url(../fonts/proximaNova/proximanova-light-webfont.woff) format("woff");
+}
+
+@font-face {
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Proxima Nova";
+  src: url(../fonts/proximaNova/proximanova-regular-webfont.woff2)
+      format("woff2"),
+    url(../fonts/proximaNova/proximanova-regular-webfont.woff) format("woff");
+}
+
+@font-face {
+  font-weight: 500;
+  font-style: normal;
+  font-family: "Proxima Nova";
+  src: url(../fonts/proximaNova/proximanova-semibold-webfont.woff2)
+      format("woff2"),
+    url(../fonts/proximaNova/proximanova-semibold-webfont.woff) format("woff");
+}
+
+@font-face {
+  font-weight: 600;
+  font-style: normal;
+  font-family: "Proxima Nova";
+  src: url(../fonts/proximaNova/proximanova-bold-webfont.woff2) format("woff2"),
+    url(../fonts/proximaNova/proximanova-bold-webfont.woff) format("woff");
+}
+
+/* Montserrat */
+@font-face {
+  font-weight: 300;
+  font-style: normal;
+  font-family: "Montserrat";
+  src: url(../fonts/montserrat/Montserrat-Light.ttf);
+}
+
+@font-face {
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Montserrat";
+  src: url(../fonts/montserrat/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-weight: 500;
+  font-style: normal;
+  font-family: "Montserrat";
+  src: url(../fonts/montserrat/Montserrat-SemiBold.ttf);
+}
+
+@font-face {
+  font-weight: 600;
+  font-style: normal;
+  font-family: "Montserrat";
+  src: url(../fonts/montserrat/Montserrat-Bold.ttf);
+}
+
+/* Inter */
+@font-face {
+  font-weight: 300;
+  font-style: normal;
+  font-family: "Inter";
+  src: url(../fonts/inter/Inter-Light.ttf);
+}
+
+@font-face {
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Inter";
+  src: url(../fonts/inter/Inter-Regular.ttf);
+}
+
+@font-face {
+  font-weight: 500;
+  font-style: normal;
+  font-family: "Inter";
+  src: url(../fonts/inter/Inter-SemiBold.ttf);
+}
+
+@font-face {
+  font-weight: 600;
+  font-style: normal;
+  font-family: "Inter";
+  src: url(../fonts/inter/Inter-Bold.ttf);
+}
+
+/*Darker Grotesque*/
+@font-face {
+  font-weight: 300;
+  font-style: normal;
+  font-family: "Darker Grotesque";
+  src: url(../fonts/darkerGrotesque/DarkerGrotesque-Light.ttf);
+}
+
+@font-face {
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Darker Grotesque";
+  src: url(../fonts/darkerGrotesque/DarkerGrotesque-Regular.ttf);
+}
+
+@font-face {
+  font-weight: 500;
+  font-style: normal;
+  font-family: "Darker Grotesque";
+  src: url(../fonts/darkerGrotesque/DarkerGrotesque-SemiBold.ttf);
+}
+
+@font-face {
+  font-weight: 600;
+  font-style: normal;
+  font-family: "Darker Grotesque";
+  src: url(../fonts/darkerGrotesque/DarkerGrotesque-Bold.ttf);
+}

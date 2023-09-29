@@ -1,0 +1,30 @@
+pr:
+  - dev
+trigger:
+  - dev
+pool:
+  name: 'IMSv2_DEV'
+jobs:
+  - job: BuildIMSv2NestJs
+    steps:
+      - script: |
+          cp ./devops/frontend/Dockerfile ./
+          cp -R ./devops/frontend /home/ncc/devops/
+        displayName: 'Get necessary files and replace directory'
+
+      - script: 
+          docker build -t imsv2-fe-dev:latest --build-arg='STAGE=dev' .
+        displayName: 'Build FE develop image'
+
+      - task: ArchiveFiles@2
+        inputs:
+          rootFolderOrFile: '$(Build.SourcesDirectory)'
+          includeRootFolder: false
+          archiveType: 'zip'
+          archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+
+      - task: PublishBuildArtifacts@1
+        inputs:
+          PathtoPublish: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+          ArtifactName: 'develop-fe-imsv2'
+          publishLocation: 'Container'
