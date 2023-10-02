@@ -121,7 +121,7 @@ In the project directory, you can run:
   ```
 
 ## Documentation
-Please visit this link: [Google Docs](bit.ly/3LJdqy0)
+Please visit this link: [Google Docs](https://docs.google.com/document/d/12bVUcqXqbnTE_D_7C8nLqG185JMnF4k0rxCfUnZvUrY/edit#heading=h.klmo98hrpnn2)
 
 ## License
 The MIT License (MIT)
