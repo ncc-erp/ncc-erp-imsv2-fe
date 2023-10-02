@@ -120,6 +120,9 @@ In the project directory, you can run:
   └── yarn.lock
   ```
 
+## Documentation
+Please visit this link: [Google Docs](bit.ly/3LJdqy0)
+
 ## License
 The MIT License (MIT)
 
